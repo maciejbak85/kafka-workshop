@@ -22,6 +22,7 @@ object Main extends App with LazyLogging {
     case 7 => new Ex7()
     case 8 => new Ex8()
     case 9 => new Ex9()
+    case 10 => new Ex10()
     case _ => throw new Exception("Invalid number provided.")
   }
 

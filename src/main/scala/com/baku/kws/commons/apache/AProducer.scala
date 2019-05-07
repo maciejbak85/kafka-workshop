@@ -13,7 +13,7 @@ class AProducer(topic: String, partitionOpt: Option[Int] = None, customProps: Op
     sendRecord(Some(key), value)
 
   def sendRecord(keyOpt: Option[String], value: String): Unit = try {
-    logger.debug(s"Sending message $keyOpt $value to $topic partition: $partitionOpt")
+    logger.info(s"Sending message $keyOpt $value to $topic partition: $partitionOpt")
     val record: ProducerRecord[String, String] = (partitionOpt, keyOpt) match {
       case (Some(partition), Some(key)) => new ProducerRecord(topic, partition, key, value)
       case (None, Some(key)) => new ProducerRecord(topic, key, value)

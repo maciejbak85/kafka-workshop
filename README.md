@@ -1,3 +1,7 @@
+##
+Docker repo for environment:
+https://github.com/simplesteph/kafka-stack-docker-compose
+
 ## Ex 1
 1 topic, 1 partition
 Producer send to topic, consumer consumes message
@@ -33,6 +37,9 @@ custom partitioner
 
 ## Ex 9
 -  Consumers > partitions
+
+## Ex 10
+acks = 0
 
 ## Producer acks configs 
 acks = 0
